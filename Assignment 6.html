@@ -1,0 +1,51 @@
+<html>
+<head>
+  <style>
+    h1{
+      position:absolute;
+      top:-10px;
+      color:red;
+    }
+    button{
+      margin-left:310px;
+      background:cyan;
+    }
+  </style>
+</head>
+<body>
+<img id='img' src="mt-01.jpg" alt="Bike" height="500px" width="700px"/><br /><br/>
+<h1 id="h1">Bike 1</h1>
+<button id='btn'
+style="padding:20px; width: 100px; font-size:24px;" onclick='chng()'>Next</button>
+<script>
+  ch=0;
+function chng()
+{
+ b=document.getElementById("btn");
+ i=document.getElementById("img");
+ h=document.getElementById('h1');
+ch=ch+1;
+switch (ch) {
+  case 0: i.src="mt-01.jpg";
+  h1.innerHTML="Bike 1";
+  b.innerHTML="Next";
+  break;
+  case 1: i.src="mt-02.jpg";
+  h1.innerHTML="Bike 2";
+    break;
+  case 2: i.src="mt-03.jpg";
+  h1.innerHTML="Bike 3";
+  break;
+  case 3: i.src="mt-04.jpg";
+  h1.innerHTML="Bike 4";
+  break;
+  case 4: i.src="mt-05.jpg";
+  h1.innerHTML="Bike 5";
+  b.innerHTML="Back";
+  ch=-1;
+  break;
+}
+}
+</script>
+</body>
+</html>
